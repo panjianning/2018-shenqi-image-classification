@@ -1,6 +1,7 @@
 # 2018-shenqi-image-classification
 2018 中国气象“神气”算法赛-17名, A榜：0.844， B榜：0.847
 
+[题目链接](https://www.datafountain.cn/competitions/315/details)
 ### Model
 PyTorch Densenet201, 最后的线性层和最后两个denseblock可训练。
 
@@ -70,3 +71,12 @@ best_epoch: 6, best_val_acc 0.886214
 ```
 
 在Kaggle Kernel上跑的， 训练1小时左右，内存占用3G左右。
+
+### Note:
+1. 只让最后一个denseblock和线性层可训练，A榜 0.822
+2. 加RandomGrayScale，A榜 0.828
+3. 再让一个denseblock可训练， A榜 0.844
+4. ColorJitter没奏效
+5. TTA（Test Time Augmentation）没奏效
+6. DPN131线下F1跑到了 0.891, 线上只有0.835 :(
+7. random seed影响还挺大
