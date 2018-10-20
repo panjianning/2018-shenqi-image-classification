@@ -68,3 +68,5 @@ saved.
 Finished Training
 best_epoch: 6, best_val_acc 0.886214
 ```
+
+在Kaggle Kernel上跑的， 训练1小时左右，内存占用3G左右。
